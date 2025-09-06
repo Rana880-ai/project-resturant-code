@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Lover - Premium Restaurant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg"></div>
+  <div class="floating-elements">
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+  </div>
+
+  <!-- Header start -->
+  <header id="home">
+    <div id="navbar">
+      <img src="img/logo.png" alt="Food Lover Logo">
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="btn btn-primary " id="book-table-btn"></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Welcome to <span class="primary-text">Food Lover</span></h1>
+      <p>Experience the finest culinary delights prepared with passion and expertise. Our restaurant offers an unforgettable dining experience with a perfect blend of flavors, ambiance, and service.</p>
+      <a href="#" class="btn btn-primary" id="book-table-hero-btn">Book a Table</a>
+    </div>
+  </header>
+  <!-- Header end -->
+
+  <!-- Booking Modal -->
+  <div class="booking-modal" id="booking-modal">
+    <div class="booking-content">
+      <button class="close-modal" id="close-modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 class="booking-title">Reserve Your Table</h2>
+      <form id="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-control" placeholder="Your Phone" required>
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" class="form-control" required>
+              <option value="">Select Guests</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 People</option>
+              <option value="7">7+ People</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <select id="time" class="form-control" required>
+              <option value="">Select Time</option>
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="21:00">9:00 PM</option>
+              <option value="22:00">10:00 PM</option>
+              <option value="23:00">11:00 PM</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="special-requests">Special Requests</label>
+          <textarea id="special-requests" class="form-control" rows="3" placeholder="Any special requests?"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-form">Confirm Reservation</button>
+      </form>
+      
+      <div class="booking-info">
+        <h3><i class="fas fa-info-circle"></i> Reservation Information</h3>
+        <p><i class="fas fa-clock"></i> We hold reservations for 15 minutes after the scheduled time</p>
+        <p><i class="fas fa-user-group"></i> Groups of 7 or more require special reservation</p>
+        <p><i class="fas fa-utensils"></i> Please inform us of any dietary restrictions in advance</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="title">
+          <h2>The Food Lover History</h2>
+          <p>More Than 25+ years of experience</p>
+        </div>
+
+        <div class="about-content">
+          <div>
+            <p>Founded in 1998, Food Lover began as a small family restaurant with a big dream: to share our passion for authentic, delicious food with our community. What started as a humble kitchen with just ten tables has grown into a beloved culinary destination.</p>
+            <p>Today, we continue to honor our roots by using traditional recipes passed down through generations, while also innovating with contemporary techniques and flavors. Our commitment to quality ingredients and exceptional service remains unchanged.</p>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHJlc3RhdXJhbnQlMjBjaGVmfGVufDB8fDB8fHww&w=1000&q=80" alt="About Food Lover">
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="section-padding">
+      <div class="container">
+        <div class="title">
+          <h2>Our Special Offers</h2>
+          <p>Enjoy our limited-time special deals</p>
+        </div>
+
+        <div class="offers-items">
+          <div class="offer-item">
+            <img src="https://i.ibb.co/7Qd0c2C/offer1.png" alt="Quattro Pasta">
+            <h3>Quattro Pasta</h3>
+            <p>Four cheese pasta with creamy sauce and fresh herbs</p>
+            <p class="price"><del>$55.00</del> <span class="primary-text">$13.00</span></p>
+          </div>
+
+          <div class="offer-item">
+            <img src="https://i.ibb.co/0j7RZ0M/offer2.png" alt="Vegetarian Pasta">
+            <h3>Vegetarian Pasta</h3>
+            <p>Fresh vegetables with our signature tomato basil sauce</p>
+            <p class="price"><del>$55.00</del> <span class="primary-text">$13.00</span></p>
+          </div>
+
+          <div class="offer-item">
+            <img src="https://i.ibb.co/4W11C5Q/offer3.png" alt="Gluten-Free Pasta">
+            <h3>Gluten-Free Pasta</h3>
+            <p>Delicious gluten-free option with your choice of sauce</p>
+            <p class="price"><del>$55.00</del> <span class="primary-text">$13.00</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+      <div class="container">
+        <div class="title">
+          <h2>Our Special Menu</h2>
+          <p>Delicious dishes made with love</p>
+        </div>
+
+        <div class="menu-items">
+          <!-- Left column -->
+          <div class="menu-column">
+            <div class="menu-item">
+              <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoZWVzZSUyMGRpc2h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="LASAL Cheese">
+              <div>
+                <h3>LASAL Cheese <span class="primary-text">$18.00</span></h3>
+                <p>Aged cheese with herbs and olive oil</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="img/food2.png" alt="JUMBO CRAB SHRIMP">
+              <div>
+                <h3>JUMBO CRAB SHRIMP <span class="primary-text">$20.00</span></h3>
+                <p>Fresh crab and shrimp with special sauce</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNvY2t0YWlsJTIwanVpY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="KOKTAIL JUICE">
+              <div>
+                <h3>KOKTAIL JUICE <span class="primary-text">$10.00</span></h3>
+                <p>Refreshing blend of tropical fruits</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="menu-column">
+            <div class="menu-item">
+              <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lYXRiYWxsfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="KOFTA MEAT">
+              <div>
+                <h3>KOFTA MEAT <span class="primary-text">$22.00</span></h3>
+                <p>Spiced meatballs with herbs and sauce</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="img/food6.png" alt="SPANISH PIES">
+              <div>
+                <h3>SPANISH PIES <span class="primary-text">$15.00</span></h3>
+                <p>Traditional Spanish pies with filling of your choice</p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img src="https://images.unsplash.com/photo-1564093497595-593ca3e2a651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="FRUIT SALAD">
+              <div>
+                <h3>FRUIT SALAD <span class="primary-text">$12.00</span></h3>
+                <p>Fresh seasonal fruits with honey dressing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-btn">
+          <a href="#" class="btn btn-secondary">Explore Full Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding">
+      <div class="container">
+        <div class="title">
+          <h2>Our Food Gallery</h2>
+          <p>A visual journey of our culinary excellence</p>
+        </div>
+
+        <div class="img-gallery">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Gallery 1">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Gallery 2">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Gallery 3">
+          <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Gallery 4">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJlc3RhdXJhbnQlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Gallery 5">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBpenphfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Gallery 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="title">
+          <h2>Contact Us</h2>
+          <p>We'd love to hear from you</p>
+        </div>
+
+        <div class="contact-content">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-box">
+              <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+              <p>Hosray Mosque, 6 October, Egypt</p>
+              <p><i class="fas fa-phone"></i> 01154912135</p>
+              <p><i class="far fa-envelope"></i> ranahossm9@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+              <h3><i class="fas fa-clock"></i> Working Hours</h3>
+              <p>Monday-Friday: 8:00 AM - 11:00 PM</p>
+              <p>Saturday-Sunday: 11:00 AM - 1:00 AM</p>
+            </div>
+
+            <div class="info-box">
+              <h3><i class="fas fa-share-alt"></i> Follow Us</h3>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tripadvisor"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Email Address" required>
+            <input type="text" name="Subject" placeholder="Subject" required>
+            <textarea name="Message" rows="5" placeholder="Message" required></textarea>
+            <button type="submit" class="btn btn-form">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Food Lover</h3>
+          <p>Experience the finest culinary journey with our authentic dishes prepared with love and expertise.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Hosray Mosque, 6 October, Egypt</p>
+          <p><i class="fas fa-phone"></i> 01154912135</p>
+          <p><i class="far fa-envelope"></i> ranahossm9@gmail.com</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Opening Hours</h3>
+          <p>Monday-Friday: 8:00 AM - 11:00 PM</p>
+          <p>Saturday-Sunday: 11:00 AM - 1:00 AM</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Food Lover Restaurant. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src = "main.js"></script>
+</body>
+</html>
